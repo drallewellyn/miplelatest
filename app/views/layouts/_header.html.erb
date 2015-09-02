@@ -3,9 +3,11 @@
     <div class="header-inner"> 
         <!-- :: info :: .header-inner acts like container --> 
         <!-- #### logo font  -->
-        <div class="logo-brand logo-font"> <a href="index.html">
-            <%= embedded_svg ('miPLElogo4.svg', class 'logo-brand-inner' %>
-        </div>
+        <%= link_to 'root' do %>
+            <div class="logo-brand logo-font">
+                    <%= embedded_svg 'miPLElogo4.svg', class: 'logo-brand-inner' %>
+            </div>
+        <% end -%>
         <!-- /.logo-brand-->
         
         <div class="header-btn-bar"> 

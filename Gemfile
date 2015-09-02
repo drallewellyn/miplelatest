@@ -13,6 +13,7 @@ gem 'twitter-bootstrap-rails', '~> 3.2.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'font-awesome-rails', '~> 4.4.0.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
