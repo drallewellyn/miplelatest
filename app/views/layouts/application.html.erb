@@ -1,14 +1,7 @@
-<!doctype html>
-<!--[if lte IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]> <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 10)|!(IE)]><!-->
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 <!--<![endif]-->
 <head>
-  <title>Miple</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Be Different Bootstrap Off Canvas Theme - Home</title>
@@ -21,6 +14,9 @@
     <!-- ASSET CSS (if you are on a secure server remove the http: but not the // it won't work local but will work for both http and httpS ============================================== -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/theme-assets.min.css" rel="stylesheet" type="text/css">
+    
+    <!-- LOGO FONT, replace with your own ============================================== -->
+    <link href="assets/css/logo-font.css" rel="stylesheet" type="text/css">
     
     <!-- THEME CSS (unminified TOC version w/purchase) ============================================== -->
     <link href="assets/css/b-different-bw.min.css" rel="stylesheet" type="text/css">
@@ -42,6 +38,13 @@
     
     <!-- WINDOWS 8 Phones BUG FIX -->
     <script src="assets/js/windows-fix.js"></script>
+<!-- rails app head stuff -->
+    <title>Miple</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <!-- end rails app head stuff -->
+
 </head>
 <body>
 
@@ -55,15 +58,19 @@
     <li><a href="#page" title="Skip to content" accesskey="c">Skip to Content</a></li>
 </ul>
 <!--  /.sr-only accessibility--> 
+<html>
 
 <%= render 'layouts/header' %>
+<%= render 'layouts/sideoutpanel' %>
+<%= yield %>
+
 <!-- =============== BEGIN #page ==============================-->
 <div id="page"> 
     <!-- =========== BEGIN CONTENT FOR THE PAGE =========================================================================== -->
     <div class="page-content" role="main">
         <div class="container"> 
             <!-- .container for entire page --> 
-            <%= yield %>
+            
             <!-- uses bigtext.js plugin AND clever use of the responsive utilities and the grid // unless you use the same character count, the results will vary -->
             <div class="row sixteen-gutter big-text-banner-wrapper">
                 <div class="col-lg-3">
@@ -447,7 +454,8 @@
     <!--=========== END CONTENT FOR THE PAGE ============================================================ --> 
 </div>
 <!-- ================== END #page ================= --> 
-<%= render 'layouts/sideoutpanel' %>
 <%= render 'layouts/footer' %>
+
 </body>
+
 </html>
