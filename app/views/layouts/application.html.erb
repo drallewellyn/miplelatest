@@ -9,7 +9,7 @@
     
     <!-- BASE CSS ============================================== -->
     <!-- custom build of latest bootstrap see json or follow the link in the file ============================================== -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
     
     <!-- ASSET CSS (if you are on a secure server remove the http: but not the // it won't work local but will work for both http and httpS ============================================== -->
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -60,9 +60,9 @@
 <!--  /.sr-only accessibility--> 
 <html>
 
-<%= render 'layouts/header' %>
+<%= render 'layouts/header' %> -->
 <%= render 'layouts/sideoutpanel' %>
-<%= yield %>
+
 
 <!-- =============== BEGIN #page ==============================-->
 <div id="page"> 
@@ -70,7 +70,7 @@
     <div class="page-content" role="main">
         <div class="container"> 
             <!-- .container for entire page --> 
-            
+            <%= yield %>
             <!-- uses bigtext.js plugin AND clever use of the responsive utilities and the grid // unless you use the same character count, the results will vary -->
             <div class="row sixteen-gutter big-text-banner-wrapper">
                 <div class="col-lg-3">
@@ -113,19 +113,23 @@
                 <div class="col-sm-7 col-md-8">
                     <div class="featured-carousel single-item-carousel slick-dots-left fade-hover-img loading-slick">
                         <div class="slick-slider-item">
-                            <figure> <a href="blog-summary-masonry-layout.html"><img src="assets/demo-images/featured-slick-carousel/a.jpg" alt=""></a>
+                            <figure>
+<!--                                 <%= link_to "blog-summary-masonry-layout.html" do %>
+                                    <%= image_tag 'assets/images/demo-images/featured-slick-carousel/a.jpg' %>
+                                <% end -%> -->
+                                    <a href="blog-summary-masonry-layout.html"><img src="assets/images/demo-images/featured-slick-carousel/a.jpg" alt=""></a>
                                 <figcaption class="info-text-box">Credit: <a class="link-underline external" href="http://graphicburger.com" target="_blank">Graphic Burger</a>. Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale.</figcaption>
                             </figure>
                         </div>
                         <!--/.slick-slider-item-->
                         <div class="slick-slider-item">
-                            <figure> <a href="blog-summary-masonry-layout.html"><img src="assets/demo-images/featured-slick-carousel/featured-buddha.jpg" alt=""></a>
+                            <figure> <a href="blog-summary-masonry-layout.html"><img src="/assets/images/demo-images/featured-slick-carousel/featured-buddha.jpg" alt=""></a>
                                 <figcaption class="info-text-box">Credit: Christina Arasmo/Theme Designer. Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.</figcaption>
                             </figure>
                         </div>
                         <!--/.slick-slider-item-->
                         <div class="slick-slider-item">
-                            <figure> <a href="blog-summary-masonry-layout.html"><img src="assets/demo-images/featured-slick-carousel/2.jpg" alt=""></a>
+                            <figure> <a href="blog-summary-masonry-layout.html"><img src="/assets/images/demo-images/featured-slick-carousel/2.jpg" alt=""></a>
                                 <figcaption class="info-text-box">Credit: Christina Arasmo/Theme Designer. Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.</figcaption>
                             </figure>
                         </div>
@@ -171,7 +175,7 @@
             
             <div class="multi-item-slick slick-dots-left fade-hover-img loading-slick">
                 <div class="slick-slider-item"> <a href="portfolio-masonry.html">
-                    <figure> <img data-lazy="assets/demo-images/latest-work-slick/dropsoul-me.jpg" alt="">
+                    <figure> <img data-lazy="assets/images/demo-images/latest-work-slick/dropsoul-me.jpg" alt="">
                         <figcaption>
                             <h3>Dive Deep Fishy</h3>
                             <p>Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery.</p>
@@ -183,7 +187,7 @@
                 <!-- /.slick-slider-item -->
                 
                 <div class="slick-slider-item"> <a href="portfolio-masonry.html">
-                    <figure> <img data-lazy="assets/demo-images/latest-work-slick/7ptstar-me.jpg" alt="">
+                    <figure> <img data-lazy="assets/images/demo-images/latest-work-slick/7ptstar-me.jpg" alt="">
                         <figcaption>
                             <h3>7 Pointed Star</h3>
                             <p>Grape silver beet watercress potato tigernut corn groundnut.</p>
@@ -195,7 +199,7 @@
                 <!-- /.slick-slider-item -->
                 
                 <div class="slick-slider-item"> <a href="portfolio-masonry.html">
-                    <figure> <img data-lazy="assets/demo-images/latest-work-slick/1383113606.jpg" alt="">
+                    <figure> <img data-lazy="assets/images/demo-images/latest-work-slick/1383113606.jpg" alt="">
                         <figcaption>
                             <h3>The Italic Poster</h3>
                             <p>Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut.</p>
@@ -207,7 +211,7 @@
                 <!-- /.slick-slider-item -->
                 
                 <div class="slick-slider-item"> <a href="portfolio-masonry.html">
-                    <figure> <img data-lazy="assets/demo-images/latest-work-slick/buddha-me.jpg" alt="">
+                    <figure> <img data-lazy="assets/images/demo-images/latest-work-slick/buddha-me.jpg" alt="">
                         <figcaption>
                             <h3>See Yourself In Others</h3>
                             <p>All beings tremble before violence. All fear death. All love live. See yourself in others, then what harm can you do?</p>
@@ -219,7 +223,7 @@
                 <!-- /.slick-slider-item -->
                 
                 <div class="slick-slider-item"> <a href="portfolio-masonry.html">
-                    <figure> <img data-lazy="assets/demo-images/latest-work-slick/om-me.jpg" alt="">
+                    <figure> <img data-lazy="assets/images/demo-images/latest-work-slick/om-me.jpg" alt="">
                         <figcaption>
                             <h3>Om Sweet Aum</h3>
                             <p>A retro Om design I created a long, long time ago.</p>
@@ -231,7 +235,7 @@
                 <!-- /.slick-slider-item -->
                 
                 <div class="slick-slider-item"> <a href="portfolio-masonry.html">
-                    <figure> <img data-lazy="assets/demo-images/latest-work-slick/2191568652.jpg" alt="">
+                    <figure> <img data-lazy="assets/images/demo-images/latest-work-slick/2191568652.jpg" alt="">
                         <figcaption>
                             <h3>See Yourself In Others</h3>
                             <p>All beings tremble before violence. All fear death. All love live. See yourself in others, then what harm can you do?</p>
@@ -243,7 +247,7 @@
                 <!-- /.slick-slider-item -->
                 
                 <div class="slick-slider-item"> <a href="portfolio-masonry.html">
-                    <figure> <img data-lazy="assets/demo-images/latest-work-slick/3210096256.jpg" alt="">
+                    <figure> <img data-lazy="assets/images/demo-images/latest-work-slick/3210096256.jpg" alt="">
                         <figcaption>
                             <h3>Title Goes Here</h3>
                             <p>Catsear cauliflower garbanzo yarrow salsify chicory garlic bell pepper napa cabbage lettuce tomato kale.</p>
@@ -255,7 +259,7 @@
                 <!-- /.slick-slider-item -->
                 
                 <div class="slick-slider-item"> <a href="portfolio-masonry.html">
-                    <figure> <img data-lazy="assets/demo-images/latest-work-slick/6995883979.jpg" alt="">
+                    <figure> <img data-lazy="assets/images/demo-images/latest-work-slick/6995883979.jpg" alt="">
                         <figcaption>
                             <h3>Title Goes Here</h3>
                             <p>Catsear cauliflower garbanzo yarrow salsify chicory garlic bell pepper napa cabbage.</p>
@@ -357,7 +361,7 @@
             <div class="row equal-height-content-box ten-gutter fade-hover-img"> 
                 <!-- makes the .content all the same height so that the buttons line up -->
                 <div class="col-sm-6 col-md-3">
-                    <div class="equal-height-inner"> <a href="#"> <img class="img-responsive" src="assets/demo-images/equal-height-col/1.jpg" alt=""> </a>
+                    <div class="equal-height-inner"> <a href="#"> <img class="img-responsive" src="assets/images/demo-images/equal-height-col/1.jpg" alt=""> </a>
                         <div class="equal-height-content">
                             <h3 class="equal-height-title"> Business Card </h3>
                             <p class="equal-height-text">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip.</p>
@@ -370,7 +374,7 @@
                 </div>
                 <!-- / col-* -->
                 <div class="col-sm-6 col-md-3">
-                    <div class="equal-height-inner"> <a href="#"> <img class="img-responsive" src="assets/demo-images/equal-height-col/2.jpg" alt=""> </a>
+                    <div class="equal-height-inner"> <a href="#"> <img class="img-responsive" src="assets/images/demo-images/equal-height-col/2.jpg" alt=""> </a>
                         <div class="equal-height-content">
                             <h3 class="equal-height-title"> Branding </h3>
                             <p class="equal-height-text">Cabbage lotus root sea lettuce brussels sprout cabbage. Catsear cauliflower garbanzo yarrow salsify chicory garlic bell pepper napa cabbage.</p>
@@ -383,7 +387,7 @@
                 </div>
                 <!-- / col-* -->
                 <div class="col-sm-6 col-md-3">
-                    <div class="equal-height-inner"> <a href="#"> <img class="img-responsive" src="assets/demo-images/equal-height-col/3.jpg" alt=""> </a>
+                    <div class="equal-height-inner"> <a href="#"> <img class="img-responsive" src="assets/images/demo-images/equal-height-col/3.jpg" alt=""> </a>
                         <div class="equal-height-content">
                             <h3 class="equal-height-title"> Give Me Sign </h3>
                             <p class="equal-height-text">Grape silver beet watercress potato tigernut corn groundnut. Chickweed okra pea winter purslane coriander yarrow sweet pepper radish garlic brussels sprout groundnut.</p>
@@ -396,7 +400,7 @@
                 </div>
                 <!-- / col-* -->
                 <div class="col-sm-6 col-md-3">
-                    <div class="equal-height-inner"> <a href="#"> <img class="img-responsive" src="assets/demo-images/equal-height-col/4.jpg" alt=""> </a>
+                    <div class="equal-height-inner"> <a href="#"> <img class="img-responsive" src="assets/images/demo-images/equal-height-col/4.jpg" alt=""> </a>
                         <div class="equal-height-content">
                             <h3 class="equal-height-title"> Pocket Folder for your stuff </h3>
                             <p class="equal-height-text">Catsear cauliflower garbanzo yarrow salsify chicory garlic bell pepper napa cabbage lettuce tomato kale arugula melon sierra leone bologi rutabaga tigernut. </p>
@@ -418,33 +422,33 @@
             <!-- /.headline-inline --> 
             <!-- ______________ MULI ITEM SLICK MINI (notice the -mini) :: USES slick slider______________ -->
             <div class="multi-item-slick-mini slick-dots-left loading-slick">
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-1.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-1.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-2.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-2.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-3.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-3.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-4.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-4.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-5.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-5.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-6.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-6.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-7.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-7.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-1.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-1.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-2.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-2.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-3.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-3.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-4.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-4.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-5.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-5.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-6.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-6.png" alt="" /></div>
                 <!-- /.slick-slider-item -->
-                <div class="slick-slider-item"><img src="assets/demo-images/fakelogo/fake-logo-7.png" alt="" /></div>
+                <div class="slick-slider-item"><img src="assets/images/demo-images/fakelogo/fake-logo-7.png" alt="" /></div>
                 <!-- /.slick-slider-item --> 
             </div>
             <!-- /.multi-item-slick-mini --> 
