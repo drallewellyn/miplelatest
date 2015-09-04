@@ -16,7 +16,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
-
+gem 'themify-icons-rails', '~> 1.0.1.1' # for themify icons
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
