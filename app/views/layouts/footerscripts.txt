@@ -1,0 +1,9 @@
+<!-- _________ FOOTER SCRIPTS  ________ --> 
+<script src="assets/js/jquery.touch-swipe.js"></script> <!-- adds touch swipe to the theme's bootstrap carousel --> 
+<script src="assets/js/bootstrap.min.js"></script> <!-- bootstrap's js --> 
+<script src="assets/js/jquery.bootstrap.addon.js"></script><!-- initializations and custom scripts for bootstrap --> 
+<script src="assets/js/jquery.magnific-popup.js"></script><!-- image popups, video, modals, etc., contains the initializations --> 
+<script src="assets/js/jquery.slick-slider.min.js"></script> <!-- base carousel/slider SLICK SLIDER --> 
+<script src="assets/js/jquery.isotope.masonry.js"></script> <!-- Isotope w/Masonry also contains the initializations --> 
+
+<script src="assets/js/jquery.main.js"></script> <!-- CORE scripts and initializations -->

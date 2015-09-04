@@ -1,0 +1,344 @@
+<!doctype html>
+<!--[if lte IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Be Different Bootstrap Off Canvas Theme - Home</title>
+    <meta name="description" content="Home : Be Different Bootstrap Theme - a different, unique theme with 10 different color combos. Built with Bootstrap, custom css3, html5, and plenty of excellent components, sliders, and other useful elements">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<!-- +++++ No Script Fallback notice +++++ -->
+<noscript>
+<div>Turn on your JavaScript!</div>
+</noscript>
+<!-- accessibility skip to nav skip content -->
+<ul class="sr-only" id="top">
+    <li><a href="#nav" title="Skip to navigation" accesskey="n">Skip to Navigation</a></li>
+    <li><a href="#page" title="Skip to content" accesskey="c">Skip to Content</a></li>
+</ul>
+<!--  /.sr-only accessibility--> 
+<%= render 'layouts/header' %>
+<%= render 'layouts/slideoutpanels' %>
+<!-- =============== BEGIN #page ==============================-->
+<div id="page"> 
+    <!-- =========== PAGE HEADER ON ALL BUT INDEX PAGES =========================================================================== --> 
+    <!-- _________ Page Header ___________ -->
+    <div class="page-header-primary">
+        <div class="container">
+            <h2>Blog Summary Masonry</h2>
+            <ol class="breadcrumb page-header-breadcrumb hidden-xs">
+                <li><a href="index.html" class="link-underline">Home</a></li>
+                <li> <a class="link-underline" href="breadcrumb-about.html">Blog</a></li>
+                <li class="active">Blog Summary Masonry</li>
+            </ol>
+        </div>
+        <!-- /.container (for page-header-primary) --> 
+    </div>
+    <!-- /.page-header-primary --> 
+    <!-- =========== BEGIN CONTENT FOR THE PAGE =========================================================================== -->
+    <div class="page-content" role="main">
+
+    <%= yield %>
+
+        <div class="container">
+            <div class="filter">
+                <span class="filter-title">
+                    Choose Filter
+                </span>
+                <ul class="sort">
+                    <li><a class="active" href="#" data-filter="*">All</a></li>
+                    <li><a href="#" data-filter=".india">India</a></li>
+                    <li><a href="#" data-filter=".quotes">Quotes</a></li>
+                    <li><a href="#" data-filter=".design">Design</a></li>
+                    <li><a href="#" data-filter=".sound">Sound</a></li>
+                    <li><a href="#" data-filter=".video">Video</a></li>
+                </ul>
+            </div>
+            <div class="filter-clone"><!-- this is where the clone of the filter goes--></div>
+            
+            <!-- _________ MASONRY WITH ISOTOPE ___________ -->
+            
+            <ul class="row row-masonry filter-masonry">
+                <li class="grid-sizer"></li>
+                <!-- required for fluid masonry layout -->
+                <li class="gutter-sizer"></li>
+                <!-- required for fluid masonry layout --> 
+                
+                <!-- IMAGE POST with image pop up -->
+                <li class="post msnry-blog-entry india">
+                    <div class="click-slide click-top"> <img src="assets/demo-images/simple/12.jpg" alt="" />
+                        <div>
+                            <span>
+                                <a href="blog-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/simple/12.jpg"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="blog-single.html">Collaboratively administrate empowered markets via plug-and-play networks</a></h4>
+                        <p>Completely synergize resource sucking relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service....</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li>
+                                <span class="ti ti-pencil-alt">
+                                </span>
+                                by Nameof Author</li>
+                            <li><a href="blog-single.html#view-comments">
+                                <span class="ti ti-comments">
+                                </span>
+                                5</a></li>
+                            <li>
+                                <span class="ti ti-calendar">
+                                </span>
+                                December 14, 2015</li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- QUOTE POST -->
+                <li class="post msnry-blog-entry quotes">
+                    <div class="msnry-blog-entry-text"> <a href="blog-single.html">
+                        <blockquote class="curly text-center">
+                            <p>Live simply so others can simply live.</p>
+                            <footer>Mahatma Gandhi</footer>
+                        </blockquote>
+                        </a> </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- SOUND POST -->
+                <li class="post msnry-blog-entry sound">
+                    <div class="soundcloud-wrapper" id="15022203"><!-- this loads the iframe without blocking --></div>
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="blog-single.html">Every year is getting shorter, never seem to find the time</a></h4>
+                        <p>Plans that either come to naught or half a page of scribbled lines. Hanging on in quiet desperation is the English way. The time is gone, the song is over, thought I'd something more to say...</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li>
+                                <span class="ti ti-pencil-alt">
+                                </span>
+                                by Nameof Author</li>
+                            <li><a href="blog-single.html#view-comments">
+                                <span class="ti ti-comments">
+                                </span>
+                                5</a></li>
+                            <li>
+                                <span class="ti ti-calendar">
+                                </span>
+                                December 14, 2015</li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- VIDEO HOLDER POST -->
+                <li class="post msnry-blog-entry video">
+                    <div class="video-holder vimeo"> 
+                        <!-- change to youtube if youtube --> 
+                        <!--IF there is a problem the api for vimeo and youtube your page will delay loading, the solution is the following html combined with the script in the jquery.main.js file --> 
+                        <a class="video-trigger" href="65543364"> 
+                        <!-- id of video either at youtube or vimeo --> 
+                        <i class="fa fa-youtube-play"> 
+                        <!-- this icon for all sources of videos--> 
+                        </i> <img src="http://b.vimeocdn.com/ts/436/594/436594814_640.jpg" alt=""/> </a> </div>
+                    <!--/.video-holder-->
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="blog-single.html">Professionally cultivate one-to-one customer service with robust ideas</a></h4>
+                        <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing. Holistically pontificate installed base portals after maintainable products...</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li>
+                                <span class="ti ti-pencil-alt">
+                                </span>
+                                by Nameof Author</li>
+                            <li><a href="blog-single.html#view-comments">
+                                <span class="ti ti-comments">
+                                </span>
+                                5</a></li>
+                            <li>
+                                <span class="ti ti-calendar">
+                                </span>
+                                December 14, 2015</li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- TEXT POST -->
+                <li class="post msnry-blog-entry design">
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="blog-single.html">We frequently maximize turn-key infrastructures</a></h4>
+                        <p>Classic is the industry leader of frictionless e-services. Is it more important for something to be cutting-edge or to be customer-defined...</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li>
+                                <span class="ti ti-pencil-alt">
+                                </span>
+                                by Nameof Author</li>
+                            <li><a href="blog-single.html#view-comments">
+                                <span class="ti ti-comments">
+                                </span>
+                                5</a></li>
+                            <li>
+                                <span class="ti ti-calendar">
+                                </span>
+                                December 14, 2015</li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- SOUND POST -->
+                <li class="post msnry-blog-entry sound">
+                    <div class="soundcloud-wrapper" id="60229275"><!-- this loads the iframe without blocking --></div>
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="blog-single.html">Overhead the albatross hangs motionless upon the air</a></h4>
+                        <p>And deep beneath the rolling waves in labyrinths of coral caves the echo of a distant tide omes willowing across the sand and everything is green and submarine ...</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li>
+                                <span class="ti ti-pencil-alt">
+                                </span>
+                                by Nameof Author</li>
+                            <li><a href="blog-single.html#view-comments">
+                                <span class="ti ti-comments">
+                                </span>
+                                5</a></li>
+                            <li>
+                                <span class="ti ti-calendar">
+                                </span>
+                                December 14, 2015</li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- QUOTE POST -->
+                <li class="post msnry-blog-entry quotes">
+                    <div class="msnry-blog-entry-text"> <a href="blog-single.html">
+                        <blockquote class="curly text-center">
+                            <p>Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
+                            <footer>Corporate Jingoist</footer>
+                        </blockquote>
+                        </a> </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- IMAGE SLIDER -->
+                <li class="post msnry-blog-entry india">
+                    <div class="carousel slide mini-carousel theme-carousel" id="post-id-123" data-interval="false"> 
+                        <!-- unique id that matches the data target in both the indicators and the controls --> 
+                        <!-- 'theme-carousel' is target that makes it slide :: 'min-carousel' is the style -->
+                        <div class="carousel-inner">
+                            <div class="item active"> <img src="assets/demo-images/simple/3.jpg" alt=""><!-- images MUST be the same height for use in a Masonry layout --> 
+                            </div>
+                            <div class="item"><!--/ .item--> 
+                                <img src="assets/demo-images/simple/17.jpg" alt=""> </div>
+                            <div class="item"><!--/ .item--> 
+                                <img src="assets/demo-images/simple/8.jpg" alt=""> </div>
+                            <!--/ .item--> 
+                        </div>
+                        <!--/ .carousel-inner-->
+                        <ol class="carousel-indicators">
+                            <li data-target="#post-id-123" data-slide-to="0" class="active"></li>
+                            <li data-target="#post-id-123" data-slide-to="1"></li>
+                            <li data-target="#post-id-123" data-slide-to="2"></li>
+                        </ol>
+                        <a class="carousel-control left" href="#" data-target="#post-id-123" data-slide="prev">
+                        <span class="ti ti-arrow-left">
+                        </span>
+                        </a> <a class="carousel-control right" href="#" data-target="#post-id-123" data-slide="next">
+                        <span class="ti ti-arrow-right">
+                        </span>
+                        </a> </div>
+                    <!--/ .carousel slide mini-carousel-->
+                    
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="blog-single.html">Image Slider with Bootstrap's Carousel</a></h4>
+                        <p>And deep beneath the rolling waves in labyrinths of coral caves the echo of a distant tide omes willowing across the sand and everything is green and submarine ...</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li>
+                                <span class="ti ti-pencil-alt">
+                                </span>
+                                by Nameof Author</li>
+                            <li><a href="blog-single.html#view-comments">
+                                <span class="ti ti-comments">
+                                </span>
+                                5</a></li>
+                            <li>
+                                <span class="ti ti-calendar">
+                                </span>
+                                December 14, 2015</li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry --> 
+                
+                <!-- VIDEO POPUP POST -->
+                <li class="post msnry-blog-entry video">
+                    <div class="click-slide click-top"> <img src="http://b.vimeocdn.com/ts/132/448/132448911_640.jpg" alt="" /><!-- THE IMAGE you will need to make or grab the thumb from vimeo-->
+                        <div>
+                            <span>
+                                <a href="blog-single.html" class="ti ti-link"></a> <a class="pop-vimeo ti ti-control-play" href="http://vimeo.com/14912890" title="title of video"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /.click-slide -->
+                    <div class="msnry-blog-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Everything Is a Remix</a></h4>
+                        <p>Video: CC by-SA 3.0 <a href="http://vimeo.com/14912890">Everything is a Remix Part 1</a> from <a href="http://vimeo.com/kirbyferguson">Kirby Ferguson</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+                        <ul class="msnry-blog-entry-meta list-inline">
+                            <li>
+                                <span class="ti ti-pencil-alt">
+                                </span>
+                                by Nameof Author</li>
+                            <li><a href="blog-single.html#view-comments">
+                                <span class="ti ti-comments">
+                                </span>
+                                5</a></li>
+                            <li>
+                                <span class="ti ti-calendar">
+                                </span>
+                                December 14, 2015</li>
+                        </ul>
+                    </div>
+                </li>
+                <!--/ .post .msnry-blog-entry -->
+                
+            </ul>
+            <!--/ .row-masonry -->
+            
+            <div class="text-center">
+                <span class="new-pagination-toggle">
+                    Pagination
+                </span>
+                <ul class="new-pagination pagination pagination-lg clearfix">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="disabled">
+                        <span>
+                            ...
+                        </span>
+                    </li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+            <!-- /.text-center holding .pagination which shows at 992px and higher and is toggled otherwise --> 
+            
+        </div>
+        <!--/ .container--> 
+    </div>
+    <!-- /.page-content role=main --> 
+    <!--=========== END CONTENT FOR THE PAGE ============================================================ --> 
+</div>
+<!-- ================== END #page ================= --> 
+<%= render 'layouts/footer' %>
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!doctype html>
+<!--[if lte IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]> <html class="no-js ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 10)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Be Different Bootstrap Off Canvas Theme - Home</title>
+    <meta name="description" content="Home : Be Different Bootstrap Theme - a different, unique theme with 10 different color combos. Built with Bootstrap, custom css3, html5, and plenty of excellent components, sliders, and other useful elements">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+<!-- +++++ No Script Fallback notice +++++ -->
+<noscript>
+<div>Turn on your JavaScript!</div>
+</noscript>
+<!-- accessibility skip to nav skip content -->
+<ul class="sr-only" id="top">
+    <li><a href="#nav" title="Skip to navigation" accesskey="n">Skip to Navigation</a></li>
+    <li><a href="#page" title="Skip to content" accesskey="c">Skip to Content</a></li>
+</ul>
+<!--  /.sr-only accessibility--> 
+<%= render 'layouts/header' %>
+<%= render 'layouts/slideoutpanels' %>
+<!-- =============== BEGIN #page ==============================-->
+<div id="page"> 
+    <!-- =========== PAGE HEADER ON ALL BUT INDEX PAGES =========================================================================== --> 
+    <!-- _________ Page Header ___________ -->
+    <div class="page-header-primary">
+        <div class="container">
+            <h2>Portfolio Masonry</h2>
+            <ol class="breadcrumb page-header-breadcrumb hidden-xs">
+                <li><a href="index.html" class="link-underline">Home</a></li>
+                <li> <a class="link-underline" href="breadcrumb-about.html">Portfolio</a></li>
+                <li class="active">Portfolio Masonry</li>
+            </ol>
+        </div>
+        <!-- /.container (for page-header-primary) --> 
+    </div>
+    <!-- /.page-header-primary --> 
+    <!-- =========== BEGIN CONTENT FOR THE PAGE =========================================================================== -->
+    <div class="page-content" role="main">
+        <div class="container"> 
+            
+            <!-- _________ FILTER for ISOTOPE // the data-filter matches a class on the  .post .msnry-port-entry ___________ -->
+            <div class="filter">
+                <span class="filter-title">
+                    Choose Filter
+                </span>
+                <ul class="sort">
+                    <li><a class="active" href="#" data-filter="*">All</a></li>
+                    <li><a href="#" data-filter=".motion">Motion</a></li>
+                    <li><a href="#" data-filter=".letter-press">Letter Press</a></li>
+                    <li><a href="#" data-filter=".identity">Identity</a></li>
+                    <li><a href="#" data-filter=".art">Art</a></li>
+                    <li><a href="#" data-filter=".web-design">Web Design</a></li>
+                    <li><a href="#" data-filter=".featured">Featured</a></li>
+                </ul>
+            </div>
+            <div class="filter-clone"><!-- the filter gets cloned here --></div>
+            
+            <!-- _________ MASONRY WITH ISOTOPE ___________ -->
+            
+            <ul class="row row-masonry filter-masonry">
+                <li class="grid-sizer"></li>
+                <!-- required for fluid masonry layout -->
+                <li class="gutter-sizer"></li>
+                <!-- required for fluid masonry layout -->
+                
+                <li class="post msnry-port-entry web-design">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/4525755090.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Black and White and Classic</a></h4>
+                        <p>Just a filler image to make 16 images</p>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/4525755090/in/photostream/" target="_blank">CC BY 2.0 FontFont</a>
+                        </span>
+                    </div>
+                </li>
+                <li class="post msnry-port-entry letter-press">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/4525123431.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Love the Look</a></h4>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/4525123431/" target="_blank">CC BY 2.0  FontFont</a>
+                        </span>
+                    </div>
+                </li>
+                
+                <!-- _________ post :: USE THIS structure for an image ___________ -->
+                <li class="post msnry-port-entry identity"> 
+                    <!--the last class on the list post match up with the data-filter, they are to be changed dynamically by your cms or you change them by hand-->
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/port-summary-1.jpg" alt="" /><!-- THE IMAGE -->
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /.click-slide -->
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Logo Mockup</a></h4>
+                        <span class="credit">
+                            <a href="http://graphicburger.com" target="_blank">Graphic Burger</a>
+                        </span>
+                        <!-- /.credit :: OPTIONAL --> 
+                    </div>
+                    <!-- /.msnry-port-entry-text--> 
+                </li>
+                <!-- /.post .msnry-port-entry -->
+                
+                <li class="post msnry-port-entry identity">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/port-summary-2.jpg" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">More Stuff</a></h4>
+                        <p>Little bit of text goes here about this...</p>
+                        <span class="credit">
+                            <a href="http://graphicburger.com" target="_blank">Graphic Burger</a>
+                        </span>
+                        <!-- /.credit :: OPTIONAL --> 
+                    </div>
+                </li>
+                <li class="post msnry-port-entry letter-press featured">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/t-wishrain.jpg" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">I wish it would rain</a></h4>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/4830134044/in/photostream/">CC BY 2.0  FontFont</a>
+                        </span>
+                    </div>
+                </li>
+                <li class="post msnry-port-entry identity">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/t-tgs.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Tampa Guitar School</a></h4>
+                        <p>I logo I did for my brother years ago.</p>
+                    </div>
+                </li>
+                
+                <!-- _________ post :: USE THIS structure for youtube ___________ -->
+                <li class="post msnry-port-entry motion"> 
+                    <!--the last class on the list post match up with the data-filter, they are to be changed dynamically by your cms or you change them by hand-->
+                    <div class="click-slide"> <img src="http://img.youtube.com/vi/xfFc-w_sX1s/0.jpg" alt="" /><!-- THE IMAGE you will need to make or grab the thumb from youtube-->
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="popup-youtube ti ti-control-play" href="http://www.youtube.com/watch?v=xfFc-w_sX1s"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /.click-slide -->
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Sutra - Introduction Video - Photography</a></h4>
+                        <p>Artist Photographer Yatin to Launch "Sutra, Fall 2011.</p>
+                        <span class="credit">
+                            <a href="http://www.youtube.com/user/yatinpatelable?feature=watch" target="_blank">CC BY-SA 3.0</a>
+                        </span>
+                        <!-- /.credit :: OPTIONAL --> 
+                    </div>
+                    <!-- /.msnry-port-entry-text--> 
+                </li>
+                <!-- /.post .msnry-port-entry --> 
+                
+                <!-- _________ post :: USE THIS structure for VIMEO video read the commments ___________ -->
+                <li class="post msnry-port-entry motion featured"><!-- this example will show up when the motion OR featured tag is clicked in the filter --> 
+                    <!--the last class on the list post match up with the data-filter, they are to be changed dynamically by your cms or you change them by hand-->
+                    <div class="click-slide"> <img src="http://b.vimeocdn.com/ts/132/448/132448911_640.jpg" alt="" /><!-- THE IMAGE you will need to make or grab the thumb from vimeo-->
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-vimeo ti ti-control-play" href="http://vimeo.com/14912890" title="title of video"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /.click-slide -->
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Everything Is a Remix</a></h4>
+                        <p>Video: CC BY-SA 3.0 <a href="http://vimeo.com/14912890">Everything is a Remix Part 1</a> from <a href="http://vimeo.com/kirbyferguson">Kirby Ferguson</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+                        <span class="credit">
+                            <a href="http://vimeo.com/14912890" target="_blank">CC BY-SA 3.0 Kirby Ferguson</a>
+                        </span>
+                        <!-- /.credit :: OPTIONAL --> 
+                    </div>
+                    <!-- /.msnry-port-entry-text--> 
+                </li>
+                <!-- /.post .msnry-port-entry -->
+                
+                <li class="post msnry-port-entry letter-press identity">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/5415648902.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Retro Love</a></h4>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/5415648902/in/photostream/" target="_blank">CC BY 2.0 FontFont</a>
+                        </span>
+                    </div>
+                </li>
+                <li class="post msnry-port-entry art">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/4867174108.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Pretty Nifty Bees Knees</a></h4>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/4867174108/" target="_blank">CC BY 2.0 FontFont</a>
+                        </span>
+                    </div>
+                    <!-- /.msnry-port-entry-text--> 
+                </li>
+                <li class="post msnry-port-entry web-design">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/4703289770.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Bumble Bee</a></h4>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/4703289770/" target="_blank">CC BY 2.0  FontFont</a>
+                        </span>
+                    </div>
+                </li>
+                <li class="post msnry-port-entry web-design">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/4525754738.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Interesting</a></h4>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/4525754738/" target="_blank">CC BY 2.0  FontFont</a>
+                        </span>
+                    </div>
+                </li>
+                <li class="post msnry-port-entry letter-press featured">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/t-typography.jpg" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">World Wide Web Typography</a></h4>
+                        <p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat...</p>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/adactio/5817823805/" target="_blank">CC BY 2.0  Jeremy Keith</a>
+                        </span>
+                    </div>
+                </li>
+                <li class="post msnry-port-entry art">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/7172980112.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Typography Nice</a></h4>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/7172980112/" target="_blank">CC BY 2.0 FontFont</a>
+                        </span>
+                    </div>
+                </li>
+                <li class="post msnry-port-entry letter-press identity">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/5573293577.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Tasty</a></h4>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/5573293577/" target="_blank">CC BY 2.0 FontFont</a>
+                        </span>
+                    </div>
+                </li>
+                <li class="post msnry-port-entry identity">
+                    <div class="click-slide"> <img src="assets/demo-images/portfolio/5573291305.png" alt="" />
+                        <div>
+                            <span>
+                                <a href="portfolio-single.html" class="ti ti-link"></a> <a class="pop-image ti ti-layers" href="assets/demo-images/portfolio/larger-image-fpo.png"></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="msnry-port-entry-text">
+                        <h4 class="h5"><a href="portfolio-single.html">Title Goes Here</a></h4>
+                        <span class="credit">
+                            <a href="http://www.flickr.com/photos/fontfont/5573291305/" target="_blank">CC BY 2.0 FontFont</a>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <!-- /.row.row-masonry -->
+            
+            <div class="text-center">
+                <span class="new-pagination-toggle">
+                    Pagination
+                </span>
+                <ul class="new-pagination pagination pagination-lg clearfix">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li class="disabled">
+                        <span>
+                            ...
+                        </span>
+                    </li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+            <!-- /.text-center holding .pagination which shows at 992px and higher and is toggled otherwise --> 
+            
+        </div>
+        <!-- /.container --> </div>
+    <!-- /.page-content role=main --> 
+    <!--=========== END CONTENT FOR THE PAGE ============================================================ --> 
+</div>
+<!-- ================== END #page ================= --> 
+<%= render 'layouts/footer' %>
+</body>
+</html>

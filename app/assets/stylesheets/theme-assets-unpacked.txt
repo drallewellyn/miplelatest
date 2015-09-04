@@ -1,5 +1,6 @@
+/* HAVE CHANGED TO TXT FILE AS I DONT THINK THIS IS REQUIRED - ALL ELSE WORKING NOW 4-9-15
 /* From the less from the theme */
-
+// @import 'themify-icons';
 /*! Themify Icons
  * Themify Icons font licensed under: http://scripts.sil.org/OFL
  * Code licensed under: http://opensource.org/licenses/mit-license.html
