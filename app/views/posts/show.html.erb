@@ -48,7 +48,7 @@
     </div>
     <!-- /.page-header-primary --> 
     <!-- =========== BEGIN CONTENT FOR THE PAGE =========================================================================== -->
-    <div class="page-content" role="main"> 
+    <div class="page-content" role="main">     
         <!--slide to sidebar toggle --> 
         <a class="visible-xs slide-sidebar has-anchor" href="#sidebar"><i class="ti ti-menu"></i> <em>Sidebar</em></a>
         <div class="container blog">
@@ -58,58 +58,57 @@
                     <div class="entry-full-post"> 
                         <!-- _____________ BEGIN 'entry-post' _________ -->
                         <article class="entry-post clearfix">
-                            <%= form_for :post, url: posts_path do |f| %>
-                                <header class="entry-header">
-                                    <%= f.label :title, class: 'entry-title' %><br>
-                                    <%= f.text_field :title, class: 'entry-title' %><br>
-                                    
-                                    <ul class="entry-meta list-inline">
-                                        <li>
-                                            <span class="ti ti-pencil-alt">
-                                            </span>
-                                            by Nameof Author</li>
-                                        <li><a href="blog-single.html#view-comments" class="has-anchor">
-                                            <span class="ti ti-comments">
-                                            </span>
-                                            6 Comments</a></li>
-                                        <li>
-                                            <span class="ti ti-calendar">
-                                            </span>
-                                            March 3, 2015</li>
-                                    </ul>
-                                    <ul class="entry-tags hidden-xs">
-                                        <li><a href="#">video</a></li>
-                                        <li><a href="#">css3</a></li>
-                                        <li><a href="#">theme</a></li>
-                                    </ul>
-                                    <div class="entry-fancy-date">
-                                        <div>
-                                            <span class="day">
-                                                3
-                                            </span>
-                                            <span class="month">
-                                                mar
-                                            </span>
-                                            <span class="year">
-                                                2015
-                                            </span>
-                                        </div>
+                            <header class="entry-header">
+                                <div class "entry-title">
+                                    <%= @post.title %>
+                                </div>    
+                                    <br>
+                                <ul class="entry-meta list-inline">
+                                    <li>
+                                        <span class="ti ti-pencil-alt">
+                                        </span>
+                                        by Anthony Llewellyn</li>
+                                    <li><a href="blog-single.html#view-comments" class="has-anchor">
+                                        <span class="ti ti-comments">
+                                        </span>
+                                        6 Comments</a></li>
+                                    <li>
+                                        <span class="ti ti-calendar">
+                                        </span>
+                                        <%= time_ago_in_words(@post.created_at) %> ago</li>
+                                </ul>
+                                <ul class="entry-tags hidden-xs">
+                                    <li><a href="#">video</a></li>
+                                    <li><a href="#">css3</a></li>
+                                    <li><a href="#">theme</a></li>
+                                </ul>
+                                <div class="entry-fancy-date">
+                                    <div>
+                                        <span class="day">
+                                            <%= @post.created_at.strftime('%e') %>
+                                        </span>
+                                        <span class="month">
+                                            <%= @post.created_at.strftime('%b') %>
+                                        </span>
+                                        <span class="year">
+                                            <%= @post.created_at.strftime('%Y') %>
                                     </div>
-                                    <div class="addthis_toolbox">
-                                        <div class="addthis_inner"> 
-                                            <!-- for sticking --> 
-                                            <a class="addthis_button_facebook"> <i class="fa fa-fw fa-facebook"></i> </a> <a class="addthis_button_twitter"> <i class="fa fa-fw fa-twitter"></i> </a> <a class="addthis_button_email"> <i class="fa fa-fw fa-envelope"></i> </a> <a class="addthis_button_compact"> <i class="fa fa-fw fa-plus"></i> </a> </div>
-                                    </div>
-                                </header>
-                                <!--/ entry-header --> 
-                                <!-- begin article content -->
+                                </div>
+                                <div class="addthis_toolbox">
+                                    <div class="addthis_inner"> 
+                                        <!-- for sticking --> 
+                                        <a class="addthis_button_facebook"> <i class="fa fa-fw fa-facebook"></i> </a> <a class="addthis_button_twitter"> <i class="fa fa-fw fa-twitter"></i> </a> <a class="addthis_button_email"> <i class="fa fa-fw fa-envelope"></i> </a> <a class="addthis_button_compact"> <i class="fa fa-fw fa-plus"></i> </a> </div>
+                                </div>
+                            </header>
+                            <!--/ entry-header --> 
+                            <!-- begin article content -->
 
                             <br>
-                                <%= f.label :body %><br>
-                                <%= f.text_field :body %><br>
-                                <br>
-                                <%= f.submit %>
-                            <% end %>
+
+                            <p>
+                                <%= @post.body %>
+                            </p>
+
                         </article>
                         <!-- _____________ END 'entry-post'_________ --> 
                     </div>
