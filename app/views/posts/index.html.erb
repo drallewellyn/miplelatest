@@ -1,34 +1,3 @@
-<!-- Based on blog-summary-masonry-layout -->
-<!doctype html>
-<!--[if lte IE 8 ]> <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if IE 9 ]> <html class="no-js ie9" lang="en"> <![endif]-->
-<!--[if (gte IE 10)|!(IE)]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Be Different Bootstrap Off Canvas Theme - Home</title>
-    <meta name="description" content="Home : Be Different Bootstrap Theme - a different, unique theme with 10 different color combos. Built with Bootstrap, custom css3, html5, and plenty of excellent components, sliders, and other useful elements">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tags %>
-
-</head>
-<body>
-
-<!-- +++++ No Script Fallback notice +++++ -->
-<noscript>
-<div>Turn on your JavaScript!</div>
-</noscript>
-<!-- accessibility skip to nav skip content -->
-<ul class="sr-only" id="top">
-    <li><a href="#nav" title="Skip to navigation" accesskey="n">Skip to Navigation</a></li>
-    <li><a href="#page" title="Skip to content" accesskey="c">Skip to Content</a></li>
-</ul>
-<!--  /.sr-only accessibility--> 
-<%= render 'layouts/header' %>
-<%= render 'layouts/slideoutpanels' %>
 <!-- =============== BEGIN #page ==============================-->
 <div id="page"> 
     <!-- =========== PAGE HEADER ON ALL BUT INDEX PAGES =========================================================================== --> 
@@ -340,6 +309,3 @@
     <!--=========== END CONTENT FOR THE PAGE ============================================================ --> 
 </div>
 <!-- ================== END #page ================= --> 
-<%= render 'layouts/footer' %>
-</body>
-</html>
