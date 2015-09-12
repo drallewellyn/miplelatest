@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :admins
+
+  devise_for :users, :skip => :registrations
   get 'pages/home'
 
   # The priority is based upon order of creation: first created -> highest priority.
