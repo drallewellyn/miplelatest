@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
   layout 'application'
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_admin!, except: [:index, :show]
 
   def index
-    @posts = Post.all.order('created_at DESC')
+    @posts = Post.all.order('created_at DESC').paginate(page: params[:page], per_page: 10)
   end
 
   def new
@@ -18,9 +19,9 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
 
     if @post.save
-      redirect_to @post
+      redirect_to @post, notice: "Article succesfully saved!"
     else
-      render 'new'
+      render 'new', notice: "Try Again. I was unable to save your post."
     end
   end
 
@@ -32,7 +33,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
 
     if @post.update(params[:post].permit(:title, :body))
-      redirect_to @post
+      redirect_to @post, notice: "Article succesfully edited!"
     else
       render 'edit'
     end
@@ -48,6 +49,9 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :slug)
   end
+
+  def find_post
+    @post = Post.friendly.find(params[:id])
 end
