@@ -13,8 +13,6 @@
 #= require jquery
 #= require jquery_ujs
 #= require twitter/bootstrap
-#= require bootstrap-sprockets
-#= require bootsy
 #= require turbolinks
 #= require twitter/bootstrap/transition
 #= require twitter/bootstrap/alert
