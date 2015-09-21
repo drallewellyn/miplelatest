@@ -3,5 +3,4 @@ class Post < ActiveRecord::Base
   validates :body, presence: true
   extend FriendlyId
   friendly_id :title, use: :slugged
-  include Bootsy::Container
 end
