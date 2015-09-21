@@ -75,7 +75,7 @@
                             <br>
 
                             <p>
-                                <%= @post.body %>
+                                <%= markdown @post.body %>
                             </p>
 
                         </article>
@@ -90,6 +90,7 @@
            </div>
             <!--/.row--> 
         </div>
+        <%= link_to "Edit", edit_post_path(@post) %>
         <!--/.container--> 
     </div>
     <!-- /.page-content role=main --> 
