@@ -13,7 +13,7 @@
   <%= f.text_field :title %><br>
   <br>
   <%= f.label :body %><br>
-  <%= f.text_field :body %><br>
+  <%= f.bootsy_area :body, editor_options: { }, class: 'full-width' %>
   <br>
   <%= f.submit %>
 <% end %>

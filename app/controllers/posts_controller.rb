@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   layout 'application'
   before_action :find_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_admin!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @posts = Post.all.order('created_at DESC').paginate(page: params[:page], per_page: 10)
@@ -12,7 +12,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
   end
 
   def create
@@ -26,11 +25,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
 
     if @post.update(params[:post].permit(:title, :body))
       redirect_to @post, notice: "Article succesfully edited!"
@@ -40,18 +37,17 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post = Post.find(params[:id])
     @post.destroy
-
     redirect_to posts_path
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :body, :slug)
+    params.require(:post).permit(:title, :body, :slug, :bootsy_image_gallery_id)
   end
 
   def find_post
     @post = Post.friendly.find(params[:id])
+  end
 end
