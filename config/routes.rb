@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   root 'pages#home'
   resources :posts
   resources :portfolios
-
+  get 'tags/:tag', to: 'posts#index', as: :tag
 end

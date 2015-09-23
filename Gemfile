@@ -23,12 +23,12 @@ gem 'jquery-turbolinks'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+gem 'acts-as-taggable-on', '~> 3.5.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'pygments.rb', '~> 0.6.0'
 gem 'redcarpet', '~> 3.2.2'
 gem 'friendly_id', '~> 5.1.0'
 gem 'will_paginate', '~> 3.0.7'
-gem 'acts-as-taggable-on', '~> 3.5.0'
 gem 'devise', '~> 3.5.2' # for admin log in
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

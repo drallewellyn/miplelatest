@@ -47,7 +47,13 @@
                                         <%= time_ago_in_words(@post.created_at) %> ago</li>
                                 </ul>
                                 <ul class="entry-tags hidden-xs">
-                                    <li><a href="#">video</a></li>
+                                    <% post.tags.any? %>
+                                        <% post.tags.each do |tag| %>
+                                            <li><a href="#"> 
+                                                <%= link_to tag.name, tag_path(tag.name) %>
+                                            </a></li>  
+                                    <% end %>
+                                    
                                     <li><a href="#">css3</a></li>
                                     <li><a href="#">theme</a></li>
                                 </ul>
