@@ -47,8 +47,8 @@
                                         <%= time_ago_in_words(@post.created_at) %> ago</li>
                                 </ul>
                                 <ul class="entry-tags hidden-xs">
-                                    <% post.tags.any? %>
-                                        <% post.tags.each do |tag| %>
+                                    <% @post.tags.any? %>
+                                        <% @post.tags.each do |tag| %>
                                             <li><a href="#"> 
                                                 <%= link_to tag.name, tag_path(tag.name) %>
                                             </a></li>  
@@ -83,7 +83,12 @@
                             <p>
                                 <%= markdown @post.body %>
                             </p>
-
+                            <% if user_signed_in? %>
+                                <div class="text-info">
+                                    <%= link_to "Edit Article", edit_post_path(@post), class: "btn btn-primary" %>
+                                    <%= link_to "Delete Article", post_path(@post), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
+                                </div>
+                            <% end %>
                         </article>
                         <!-- _____________ END 'entry-post'_________ --> 
                     </div>
@@ -96,7 +101,6 @@
            </div>
             <!--/.row--> 
         </div>
-        <%= link_to "Edit", edit_post_path(@post) %>
         <!--/.container--> 
     </div>
     <!-- /.page-content role=main --> 
