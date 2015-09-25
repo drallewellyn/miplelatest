@@ -10,7 +10,7 @@
     <title>Be Different Bootstrap Off Canvas Theme - Home</title>
     <meta name="description" content="Home : Be Different Bootstrap Theme - a different, unique theme with 10 different color combos. Built with Bootstrap, custom css3, html5, and plenty of excellent components, sliders, and other useful elements">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'jquery', 'jquery-ui', 'jquery.turbolinks', 'jquery-ujs','jquery.main', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'jquery', 'jquery-ui', 'jquery.turbolinks', 'bootstrap.min', 'jquery.magnific-popup', 'jquery.touch-swipe', 'jquery.slick-slider.min', 'jquery.isotope.masonry', 'jquery-ujs', 'jquery.main', 'jquery.bootstrap.addon', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <!-- BASE CSS ============================================== -->
     <!-- custom build of latest bootstrap see json or follow the link in the file ============================================== -->
@@ -66,7 +66,11 @@
         <!-- <div class="container">  -->
             <!-- .container for entire page --> 
             
-
+            <% if notice %>
+                <p class="notice"><%= notice %></p>
+            <% elsif alert %>
+                <p class="alert"><%= alert %></p>
+            <% end %>
             <%= yield %>
 
 

@@ -18,10 +18,11 @@ gem "twitter-bootstrap-rails"
 gem 'themify-icons-rails', '~> 1.0.1.1' # for themify icons
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'jquery-turbolinks'
 gem 'turbolinks'
+gem 'jquery-ui-rails'
+gem 'jquery-ui-themes'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 gem 'acts-as-taggable-on', '~> 3.5.0'

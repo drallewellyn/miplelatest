@@ -72,6 +72,9 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -85,6 +88,8 @@ GEM
       turbolinks
     jquery-ui-rails (5.0.5)
       railties (>= 3.2.16)
+    jquery-ui-themes (0.0.11)
+      httparty
     json (1.8.3)
     less (2.6.0)
       commonjs (~> 0.2.7)
@@ -102,6 +107,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.8.1)
     multi_json (1.11.2)
+    multi_xml (0.5.5)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -210,6 +216,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   jquery-ui-rails
+  jquery-ui-themes
   less-rails
   pg
   pygments.rb (~> 0.6.0)
