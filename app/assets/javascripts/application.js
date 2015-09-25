@@ -11,11 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require twitter/bootstrap/transition
-//=require twitter/bootstrap/alert
+//= require twitter/bootstrap/alert
 //= require twitter/bootstrap/modal
 //= require twitter/bootstrap/button
 //= require twitter/bootstrap/collapse
