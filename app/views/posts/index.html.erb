@@ -47,7 +47,18 @@
                 
                 <!-- NEW STUFF -->
                 <% @posts.each do |post| %>
-                    <li class="post msnry-blog-entry india">
+                    <li class="post msnry-blog-entry #">
+                        <% if post.image.exists? %>
+                            <div class= "click-slide click-top">
+                            <a class="ti ti-link">
+                            <a class="pop-image ti ti-layers">
+                                <%= link_to post do %>
+                                    <%= image_tag post.image.url(:medium) %>
+                                <% end -%>
+                            </a>
+                            </a>
+                            </div> 
+                        <% end %>
                         <div class="msnry-blog-entry-text">
                             <h4 class"h5"><a href="#"><%= link_to post.title, post %></a></h4>
                             <p><%= truncate(post.body, :length => 150) %></p>

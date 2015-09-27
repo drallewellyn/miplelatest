@@ -53,9 +53,6 @@
                                                 <%= link_to tag.name, tag_path(tag.name) %>
                                             </a></li>  
                                     <% end %>
-                                    
-                                    <li><a href="#">css3</a></li>
-                                    <li><a href="#">theme</a></li>
                                 </ul>
                                 <div class="entry-fancy-date">
                                     <div>
@@ -77,23 +74,25 @@
                             </header>
                             <!--/ entry-header -->
                             <!--/ thumbnail if present -->
-                            <%= if @post.images.any? %>
-                                <%= link_to img_path @post.image, class: "img-full-width-tight" %>
+                            <% if @post.image.exists? %>    
+                                <%= image_tag @post.image.url(:large), class: 'img-full-width-tight' %>
                             <% end %>
                             <!--/ end thumbnail if present -->
-                            <!-- begin article content -->
+                            <!--/ begin article content -->
 
                             <br>
 
                             <p>
                                 <%= markdown @post.body %>
                             </p>
+                            <!--/ CRUD options if admin -->
                             <% if user_signed_in? %>
                                 <div class="text-info">
                                     <%= link_to "Edit Article", edit_post_path(@post), class: "btn btn-primary" %>
                                     <%= link_to "Delete Article", post_path(@post), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?" } %>
                                 </div>
                             <% end %>
+                            <!--/ end CRUD options -->
                         </article>
                         <!-- _____________ END 'entry-post'_________ --> 
                     </div>

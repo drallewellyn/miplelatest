@@ -12,8 +12,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem 'paperclip', '~> 4.3.0'
-gem 'aws-sdk', '< 2.0'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
@@ -36,6 +34,8 @@ gem 'masonry-rails'
 gem 'will_paginate', '~> 3.0.7'
 gem 'will_paginate-bootstrap','~>1.0.1'
 gem 'devise', '~> 3.5.2' # for admin log in
+gem 'paperclip', '~> 4.3.0'
+gem 'aws-sdk', '< 2.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
