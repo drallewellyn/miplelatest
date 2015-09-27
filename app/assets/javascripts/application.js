@@ -14,14 +14,14 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery-ui
-//= require twitter/bootstrap
+//= require bootstrap
 //= require twitter/bootstrap/transition
 //= require twitter/bootstrap/alert
 //= require twitter/bootstrap/modal
 //= require twitter/bootstrap/button
 //= require twitter/bootstrap/collapse
 //= require twitter/bootstrap/dropdown
-//= require twitter/bootstrap/tooltip
+//= require bootstrap/tooltip
 //= require twitter/bootstrap/popover
 //= require twitter/bootstrap/carousel
 //= require twitter/bootstrap/affix
@@ -56,7 +56,8 @@
 //= require js/unpacked/modernizr.2.8.3-un-packed
 //= require js/unpacked/respond.src
 
-
+//= require bootstrap
+//= require jquery.bootstrap.addon
 //this needs to go at end
 //= require turbolinks 
 //= require_tree .

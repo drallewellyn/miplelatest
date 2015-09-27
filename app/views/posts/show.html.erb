@@ -75,7 +75,12 @@
                                         <a class="addthis_button_facebook"> <i class="fa fa-fw fa-facebook"></i> </a> <a class="addthis_button_twitter"> <i class="fa fa-fw fa-twitter"></i> </a> <a class="addthis_button_email"> <i class="fa fa-fw fa-envelope"></i> </a> <a class="addthis_button_compact"> <i class="fa fa-fw fa-plus"></i> </a> </div>
                                 </div>
                             </header>
-                            <!--/ entry-header --> 
+                            <!--/ entry-header -->
+                            <!--/ thumbnail if present -->
+                            <%= if @post.images.any? %>
+                                <%= link_to img_path @post.image, class: "img-full-width-tight" %>
+                            <% end %>
+                            <!--/ end thumbnail if present -->
                             <!-- begin article content -->
 
                             <br>

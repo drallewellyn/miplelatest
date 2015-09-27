@@ -10,8 +10,14 @@
     <title>Be Different Bootstrap Off Canvas Theme - Home</title>
     <meta name="description" content="Home : Be Different Bootstrap Theme - a different, unique theme with 10 different color combos. Built with Bootstrap, custom css3, html5, and plenty of excellent components, sliders, and other useful elements">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'jquery', 'jquery-ui', 'jquery.turbolinks', 'bootstrap.min', 'jquery.magnific-popup', 'jquery.touch-swipe', 'jquery.slick-slider.min', 'jquery.isotope.masonry', 'jquery-ujs', 'jquery.main', 'jquery.bootstrap.addon', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'jquery', 'jquery-ui', 'jquery.turbolinks', 'bootstrap.min', 'jquery.magnific-popup', 'jquery.touch-swipe', 'jquery.slick-slider.min', 'jquery.isotope.masonry', 'jquery-ujs', 'jquery.main', 'jquery.bootstrap.addon', 'jquery.min' 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script type='text/javascript'> // script for tooltip
+        $(function () {
+        $("[rel='tooltip']").tooltip();
+        });
+    </script>
+
     <!-- BASE CSS ============================================== -->
     <!-- custom build of latest bootstrap see json or follow the link in the file ============================================== -->
     <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
@@ -67,9 +73,15 @@
             <!-- .container for entire page --> 
             
             <% if notice %>
-                <p class="notice"><%= notice %></p>
-            <% elsif alert %>
-                <p class="alert"><%= alert %></p>
+                <br>
+                <div class = "container text-center panel panel-info text-info bg-info">
+                    <p class="notice"><%= notice %></p>
+                </div>
+                <% elsif alert %>
+                <br>
+                <div class = "container text-center panel panel-warning text-warning bg-warning">
+                    <p class="alert"><%= alert %></p>
+                </div>
             <% end %>
             <%= yield %>
 
@@ -90,3 +102,5 @@
 
 <!-- FOOTER SCRIPTS -->
     <!-- not required handled by rails -->
+<script src="assets/js/bootstrap.min.js"></script> <!-- bootstrap's js --> 
+<script src="assets/js/jquery.bootstrap.addon.js"></script><!-- initializations and custom scripts for bootstrap --> 
