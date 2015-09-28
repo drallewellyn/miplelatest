@@ -49,15 +49,12 @@
                 <% @posts.each do |post| %>
                     <li class="post msnry-blog-entry #">
                         <% if post.image.exists? %>
-                            <div class= "click-slide click-top">
-                            <a class="ti ti-link">
-                            <a class="pop-image ti ti-layers">
-                                <%= link_to post do %>
-                                    <%= image_tag post.image.url(:medium) %>
-                                <% end -%>
-                            </a>
-                            </a>
-                            </div> 
+                            <div class="click-slide click-top"> 
+                                <%= link_to image_tag post.image.url(:medium) %>
+                                <div>
+                                    <%= link_to '<span class = "text-center ti ti-link"></span>'.html_safe, post %>
+                                </div>
+                            </div>
                         <% end %>
                         <div class="msnry-blog-entry-text">
                             <h4 class"h5"><a href="#"><%= link_to post.title, post %></a></h4>
@@ -143,26 +140,17 @@
                 <span class="new-pagination-toggle">
                     Pagination
                 </span>
-                <ul class="new-pagination pagination pagination-lg clearfix">
-                    <%= will_paginate @posts %>
-                    <li><a href="#">&laquo;</a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li class="disabled">
-                        <span>
-                            ...
-                        </span>
-                    </li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">&raquo;</a></li>
-                </ul>
+                <!-- <ul class="new-pagination pagination pagination-lg clearfix"> -->
+                    <%= page_entries_info @posts %>
+                    <br>
+                    <%= will_paginate @posts, renderer: BootstrapPagination::Rails, :class => 'new-pagination pagination pagination-lg clearfix', :previous_label => '<<', :next_label => '>>' %>
+                    
+                <!-- </ul> -->
             </div>
             <!-- /.text-center holding .pagination which shows at 992px and higher and is toggled otherwise --> 
             
         </div>
 
-        <%= will_paginate @posts %>
         <!--/ .container--> 
     </div>
     <!-- /.page-content role=main --> 

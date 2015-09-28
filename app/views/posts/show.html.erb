@@ -70,6 +70,12 @@
                                     <div class="addthis_inner"> 
                                         <!-- for sticking --> 
                                         <a class="addthis_button_facebook"> <i class="fa fa-fw fa-facebook"></i> </a> <a class="addthis_button_twitter"> <i class="fa fa-fw fa-twitter"></i> </a> <a class="addthis_button_email"> <i class="fa fa-fw fa-envelope"></i> </a> <a class="addthis_button_compact"> <i class="fa fa-fw fa-plus"></i> </a> </div>
+                                <!-- Twitter -->
+    <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @mackenziechild - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+    <!-- Facebook -->
+    <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+    <!-- Google Plus -->
+    <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
                                 </div>
                             </header>
                             <!--/ entry-header -->
