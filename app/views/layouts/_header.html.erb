@@ -58,12 +58,12 @@
                     <a href="#" class="anchor header-btn header-btn-lg" data-slide="slide" data-target="#contact-panel"> <i class="fa fa-user-md header-icon"></i>
                     <span class="header-btn-text">
                         Contact
-                    </span>
+                    </span class = "has-tooltip">
                     </a> 
                     <!-- this above data-slide toggles the #contact-panel .slide-panel example --> 
                     <!-- /END 3rd .header-btn .header-btn-lg in second row --> 
                     <!-- BEGIN 4th .header-btn .header-btn-sm in second row--> 
-                    <a href="#" class="header-btn header-btn-sm search-toggle" data-slide="slide" data-target="#search-panel"  data-hover="tooltip" data-placement="left" title="search"> <i class="fa fa-search header-icon"></i> </a> 
+                    <a href="#" class="header-btn header-btn-sm search-toggle" data-slide="slide" data-target="#search-panel" data-hover="tooltip" data-placement="left" title="search"> <i class="fa fa-search header-icon"></i> </a> 
                     <!-- this above data-slide toggles the #search-panel .slide-panel example --> 
                     <!-- /END 4th .header-btn .header-btn-sm in second row --> 
                     <!-- BEGIN 5th .header-btn .header-btn-sm in second row--> 
@@ -89,3 +89,10 @@
     <!-- /END .header-inner --> 
 </header>
 <!-- =============== END HEADER ==============================-->
+<footer>
+    <script>
+        $(document).ready(function() {
+        $('.has-tooltip').tooltip();
+        });
+    </script>
+</footer>

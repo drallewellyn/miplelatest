@@ -14,34 +14,10 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery-ui
-//= require bootstrap
-//= require twitter/bootstrap/transition
-//= require twitter/bootstrap/alert
-//= require twitter/bootstrap/modal
-//= require twitter/bootstrap/button
-//= require twitter/bootstrap/collapse
-//= require twitter/bootstrap/dropdown
-//= require bootstrap/tooltip
-//= require twitter/bootstrap/popover
-//= require twitter/bootstrap/carousel
-//= require twitter/bootstrap/affix
+
 
 //= require js/bootstrap.min
-//= require js/contact-form-process-validation
-//= require js/ie8
-//= require js/jquery-1.11.1.min
-//= require js/jquery.bootstrap.addon
-//= require js/jquery.form.min
-//= require js/jquery.isotope.masonry
-//= require js/jquery.magnific-popup
-//= require js/jquery.main
-//= require js/jquery.slick-slider.min
-//= require js/jquery.touch-swipe
-//= require js/jquery.validate.min
-//= require js/modernizr.2.8.3
-//= require js/respond.min
-//= require js/webfont
-//= require js/windows-fix
+
 
 //= require js/unpacked/bootstrap
 //= require js/unpacked/jquery-1.11.1
@@ -54,10 +30,15 @@
 //= require js/unpacked/jquery.touch-swipe
 //= require js/unpacked/jquery.validate
 //= require js/unpacked/modernizr.2.8.3-un-packed
-//= require js/unpacked/respond.src
 
 //= require bootstrap
 //= require jquery.bootstrap.addon
 //this needs to go at end
 //= require turbolinks 
 //= require_tree .
+
+
+
+$(document).ready(function() {
+  $('.has-tooltip').tooltip();
+});
