@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   before_action :find_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :tag_cloud
 
   def index
     if params[:tag].present? 
@@ -9,6 +10,10 @@ class PostsController < ApplicationController
     else
       @posts = Post.all.order('created_at DESC').paginate(page: params[:page], per_page: 4)
     end
+  end
+
+  def tag_cloud
+    @tags = Post.tag_counts_on(:tags, :limit => 3, :order => "count desc")
   end
 
   def new
