@@ -24,7 +24,7 @@
                     Choose Filter
                 </span>
                 <span class="sort" style = "display: inline-block">
-                    <li><a class="active" href="#" data-filter="*">All</a></li>
+                    <%= link_to 'Latest', posts_path %>
                     <% tag_cloud(@tags, %w(tagsort tagsort tagsort)) do |tag, css_class| %>
                         <li>
                             <%= link_to tag.name, tag_path(tag.name), :class => css_class %>
@@ -48,8 +48,8 @@
                         <% if post.image.exists? %>
                             <div class="click-slide click-top"> 
                                 <%= link_to image_tag post.image.url(:medium) %>
-                                <div>
-                                    <%= link_to '<span class = "text-center ti ti-link"></span>'.html_safe, post %>
+                                <div class = "text-center">
+                                    <%= link_to '<span class = "ti ti-eye"></span>'.html_safe, post %>
                                 </div>
                             </div>
                         <% end %>
@@ -92,7 +92,7 @@
                 <!-- <ul class="new-pagination pagination pagination-lg clearfix"> -->
                     <%= page_entries_info @posts %>
                     <br>
-                    <%= will_paginate @posts, renderer: BootstrapPagination::Rails, :class => 'new-pagination pagination pagination-lg clearfix', :previous_label => '<<', :next_label => '>>' %>
+                    <%= will_paginate @posts, renderer: BootstrapPagination::Rails, :class => 'new-pagination pagination pagination-lg clearfix' %>
                     
                 <!-- </ul> -->
             </div>
