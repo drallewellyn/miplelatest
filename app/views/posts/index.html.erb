@@ -19,18 +19,21 @@
     <div class="page-content" role="main">
 
         <div class="container">
-            <div class="text-center filter">
+            <div class="filter">
                 <span class="filter-title">
                     Choose Filter
                 </span>
-                <span class="sort" style = "display: inline-block">
-                    <%= link_to 'Latest', posts_path %>
+                <ul class="sort">
+                    
+                    <%= link_to 'Latest', posts_path, :style => "display: inline-block" %>
+                    <br>
+                   
                     <% tag_cloud(@tags, %w(tagsort tagsort tagsort)) do |tag, css_class| %>
                         <li>
                             <%= link_to tag.name, tag_path(tag.name), :class => css_class %>
-                         </li>
+                        </li>
                     <% end %>
-                </span>
+                </ul>
             </div>
             <div class="filter-clone"><!-- this is where the clone of the filter goes--></div>
             
