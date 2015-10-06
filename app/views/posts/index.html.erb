@@ -23,13 +23,15 @@
                 <span class="filter-title">
                     Choose Filter
                 </span>
-                <ul class="sort">
+                <ul class="sort jsbutton">
                     
-                    <%= link_to 'Latest', posts_path, :style => "display: inline-block" %>
+                    <%= link_to 'Latest', posts_path, :class => 'jslink', :style => "display: inline-block" %>
                     <br>
                    
-                    <% tag_cloud(@tags, %w(tagsort tagsort tagsort)) do |tag, css_class| %>
-                        <li>
+                    <span class = "jsbutton">
+                        <% tag_cloud(@tags, %w(tagsort tagsort tagsort)) do |tag, css_class| %>
+                    </span>
+                        <li class = "jslink">
                             <%= link_to tag.name, tag_path(tag.name), :class => css_class %>
                         </li>
                     <% end %>
