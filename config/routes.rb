@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :pletools
   devise_for :users, :skip => :registrations
   resources :posts
   resources :portfolios

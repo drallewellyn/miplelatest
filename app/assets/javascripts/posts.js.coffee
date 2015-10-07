@@ -5,13 +5,7 @@ jQuery ->
   $("a[rel~=popover], .has-popover").popover()
   $("a[rel~=tooltip], .has-tooltip").tooltip()
 
-# $(document).ready ->
-#   $('jsbutton').click ->
-#     $('jstag').toggle()
-#     return
-#   return
-
   $(document).ready ->
   $('jsbutton').click ->
-    $grid.isotope filter: '.jstag'
+    $grid.isotope filter: 'jstag'
   return

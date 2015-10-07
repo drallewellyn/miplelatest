@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @pletool.title %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @pletool.link %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pletool.description %>
+</p>
+
+<%= link_to 'Edit', edit_pletool_path(@pletool) %> |
+<%= link_to 'Back', pletools_path %>
