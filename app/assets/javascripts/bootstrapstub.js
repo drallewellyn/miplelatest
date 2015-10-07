@@ -1,3 +1,5 @@
+// does not look like this is required hence 'stub'
+
 /*!
  * Bootstrap v3.3.4 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
