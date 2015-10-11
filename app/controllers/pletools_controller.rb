@@ -1,74 +1,61 @@
 class PletoolsController < ApplicationController
-  before_action :set_pletool, only: [:show, :edit, :update, :destroy]
+  
+  before_action :find_pletool, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :tag_cloud
 
-  # GET /pletools
-  # GET /pletools.json
   def index
-    @pletools = Pletool.all
+    if params[:tag].present? 
+      @pletool = Pletool.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 4)
+    else
+      @pletools = Pletool.all.order('created_at DESC').paginate(page: params[:page], per_page: 4)
+    end
   end
 
-  # GET /pletools/1
-  # GET /pletools/1.json
+  def tag_cloud
+    @tags = Pletool.tag_counts_on(:tags, :limit => 3, :order => "count desc")
+  end
+  
   def show
   end
 
-  # GET /pletools/new
   def new
     @pletool = Pletool.new
   end
 
-  # GET /pletools/1/edit
   def edit
   end
 
-  # POST /pletools
-  # POST /pletools.json
   def create
-    @pletool = Pletool.new(pletool_params)
+    @pletool = Pletool.new(Pletool_params)
 
-    respond_to do |format|
-      if @pletool.save
-        format.html { redirect_to @pletool, notice: 'Pletool was successfully created.' }
-        format.json { render :show, status: :created, location: @pletool }
-      else
-        format.html { render :new }
-        format.json { render json: @pletool.errors, status: :unprocessable_entity }
-      end
+    if @pletool.save
+      redirect_to @pletool, notice: "Tool succesfully saved!"
+    else
+      render 'new', notice: "Try Again. I was unable to save your PLE Tool."
     end
   end
 
-  # PATCH/PUT /pletools/1
-  # PATCH/PUT /pletools/1.json
   def update
-    respond_to do |format|
-      if @pletool.update(pletool_params)
-        format.html { redirect_to @pletool, notice: 'Pletool was successfully updated.' }
-        format.json { render :show, status: :ok, location: @pletool }
-      else
-        format.html { render :edit }
-        format.json { render json: @pletool.errors, status: :unprocessable_entity }
-      end
+    
+    if @pletool.update(params[:pletool].permit(:title, :description, :link, :image, :tag_list))
+      redirect_to @pletool, notice: "PLE Tool succesfully edited!"
+    else
+      render 'edit'
     end
   end
 
-  # DELETE /pletools/1
-  # DELETE /pletools/1.json
   def destroy
     @pletool.destroy
     respond_to do |format|
-      format.html { redirect_to pletools_url, notice: 'Pletool was successfully destroyed.' }
+      format.html { redirect_to pletools_url, notice: 'Ple Tool was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_pletool
-      @pletool = Pletool.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def pletool_params
-      params.require(:pletool).permit(:title, :link, :description)
+      params.require(:pletool).permit(:title, :link, :description, :image_url, :slug, :tag_list)
     end
 end

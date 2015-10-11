@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151007053846) do
+ActiveRecord::Schema.define(version: 20151011043135) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -30,9 +30,16 @@ ActiveRecord::Schema.define(version: 20151007053846) do
     t.string   "title"
     t.string   "link"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "slug"
   end
+
+  add_index "pletools", ["slug"], name: "index_pletools_on_slug", unique: true
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"

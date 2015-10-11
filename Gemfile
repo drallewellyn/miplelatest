@@ -36,6 +36,7 @@ gem 'will_paginate-bootstrap','~>1.0.1'
 gem 'devise', '~> 3.5.2' # for admin log in
 gem 'paperclip', '~> 4.3.0'
 gem 'aws-sdk', '< 2.0'
+gem 'rinku', '~> 1.7.3' # for html autolinks
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
