@@ -1,6 +1,7 @@
 <header class="entry-header">
     <div class "entry-title">
         <%= @pletool.title %>
+        <br>
         <%= Rinku.auto_link(@pletool.link).html_safe %>
     </div>    
         <br>
@@ -42,19 +43,19 @@
         <div class="addthis_inner"> 
             <!-- for sticking --> 
                 <!-- Twitter -->
-                    <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> by @HETIMedDir - &amp;url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+                    <a onclick="javascript:window.open('http://twitter.com/share?text=<%= @pletool.title %> by @HETIMedDir - &amp;url=<%= url_for([@pletool, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
                         <a class="addthis_button_twitter">
                             <i class="fa fa-fw fa-twitter"></i>
                         </a>
                     </a>
                 <!-- Facebook -->
-                    <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+                    <a onclick="javascript:window.open('http://www.facebook.com/sharer.php?u=<%= url_for([@pletool, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
                          <a class="addthis_button_facebook">
                             <i class="fa fa-fw fa-facebook"></i>
                         </a>
                     </a>
                 <!-- Google Plus -->
-                <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
+                <a onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@pletool, {only_path: false}]) %>', '_blank', 'width=800, height=500, top=200, left=300');void(0);">
                  <a class="addthis_button_gogle_plus">
                             <i class="fa fa-fw fa-google_plus"></i>
                         </a>
@@ -73,5 +74,5 @@
 <br>
 
 <p>
-    <%= markdown @pletool.body %>
+    <%= markdown @pletool.description %>
 </p>

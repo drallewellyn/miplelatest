@@ -100,7 +100,9 @@
                 <!-- </ul> -->
             </div>
             <!-- /.text-center holding .pagination which shows at 992px and higher and is toggled otherwise --> 
-            
+            <% if user_signed_in? %>
+                <%= link_to "New Article", new_post_path(@post), class: "btn btn-primary" %>
+            <% end %>
         </div>
 
         <!--/ .container--> 

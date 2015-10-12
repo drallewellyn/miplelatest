@@ -27,7 +27,7 @@ class PletoolsController < ApplicationController
   end
 
   def create
-    @pletool = Pletool.new(Pletool_params)
+    @pletool = Pletool.new(pletool_params)
 
     if @pletool.save
       redirect_to @pletool, notice: "Tool succesfully saved!"
@@ -58,4 +58,9 @@ class PletoolsController < ApplicationController
     def pletool_params
       params.require(:pletool).permit(:title, :link, :description, :image_url, :slug, :tag_list)
     end
+
+    def find_pletool
+      @pletool = Pletool.friendly.find(params[:id])
+    end
+
 end
