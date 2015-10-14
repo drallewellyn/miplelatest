@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :pletools
-  devise_for :users, :skip => :registrations
+  devise_for :users
   resources :posts
   resources :portfolios
   get 'pages/home'
