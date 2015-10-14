@@ -1,0 +1,24 @@
+// CSS
+/*
+ *= require themify-icons
+ *= require bootstrap
+ *= require theme-assets.unpacked
+ *= require b-different-retro.unpacked
+ *= require jquery-ui
+*/ 
+
+
+
+// Font Awesome
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Glyphicons
+
+
+
+
+.header {
+    background-color: rgba(171, 227, 237, 0.9);}
+.header-btn {
+    background: rgba(171, 227, 237, 0.5);}

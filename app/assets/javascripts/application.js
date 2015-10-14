@@ -13,25 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require jquery-ui
-
-
-//= require js/bootstrap.min
-
-
-//= require js/unpacked/bootstrap
-//= require js/unpacked/jquery-1.11.1
-//= require js/unpacked/jquery.cookie
-//= require js/unpacked/jquery.form
-//= require js/unpacked/jquery.isotope.masonry
-//= require js/unpacked/jquery.magnific-popup
-//= require js/unpacked/jquery.main
-//= require js/unpacked/jquery.slick-slider
-//= require js/unpacked/jquery.touch-swipe
-//= require js/unpacked/jquery.validate
-//= require js/unpacked/modernizr.2.8.3-un-packed
-
 //= require bootstrap
 //= require jquery.bootstrap.addon
 //this needs to go at end
