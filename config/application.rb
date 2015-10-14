@@ -26,5 +26,6 @@ module Websitestyle
     # config.assets.paths << Rails.root.join('vendor', 'app', 'assets', 'fonts')
     # config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.active_record.raise_in_transactional_callbacks = true
+    config.assets.initialize_on_precompile = false # for heroku deploy
   end
 end
